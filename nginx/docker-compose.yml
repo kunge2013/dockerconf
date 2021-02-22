@@ -4,15 +4,18 @@ version: '2.0'
 services:
 #定义的docker nginx容器
   nginx:
+    container_name: nginx
+    environment:
+      - TZ=Asia/Shanghai
     volumes:
     - /Users/fangkun/dockerconf/nginx/conf.d:/etc/nginx/conf.d
     - /Users/fangkun/dockerconf/nginx/log:/var/log/nginx
-    - /Users/fangkun/dockerconf/nginx/www:/var/www
-    - /Users/fangkun/dockerconf/nginx/etc:/etc/letsencrypt
+    - /Users/fangkun/dockerconf/nginx/www:/etc/nginx/html
+    - /etc/letsencrypt:/etc/letsencrypt
 #设置为always，表明此容器应该在停止的情况下总是重启，比如，服务器启动时，这个容器就跟着启动，不用手动启动，服务器启动之后，进入到docker-compose.yml文件路径下，执行docker-compose ps可以看到，该容器正在运行。
     restart: always
 # image：这个是需要依赖的容器，也就是nginx软件，可以到docker官方镜像上找到最新版的镜像。
-    image: nginx:1.11.6-alpine
+    image: nginx
 #ports：这个是容器自己运行的端口号和需要暴露的端口号。比如： - 8080:80，表示容器内运行着的端口是80，把端口暴露给8080端口，从外面访问的是8080端口，就能自动映射到80端口上。
     ports:
     - 8080:80
