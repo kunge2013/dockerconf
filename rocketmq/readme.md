@@ -19,4 +19,5 @@ https://www.jianshu.com/p/706588323276
 那么需要在broker.conf中添加
 ... 
  conf/broker.conf
+ ==
  brokerIP1=X.X.X.X（公网IP）
