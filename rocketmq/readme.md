@@ -15,8 +15,7 @@ copy 过去
 https://www.jianshu.com/p/706588323276
 
 
-## 9.若提示 RocketmqRemoting: closeChannel: close the connection to remote address[] result: true可能是公网Ip没有配置，
-那么需要在broker.conf中添加
+## 9.若提示 RocketmqRemoting: closeChannel: close the connection to remote address[] result: true可能是公网Ip没有配置，那么需要在broker.conf中添加
  ==
  conf/broker.conf
 == 
