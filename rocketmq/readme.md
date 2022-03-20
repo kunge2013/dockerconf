@@ -1,4 +1,4 @@
-1.安装docker-compose
+--  1.安装docker-compose
 2.cd /user/local/docker/rocketmq/
 3.mkdir data -- 在/user/local/docker/rocketmq/data下面
 4.copy docker-compose.yml到/user/local/docker/rocketmq下面
