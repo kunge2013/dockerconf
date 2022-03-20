@@ -6,4 +6,5 @@
 ## vi brokerconf.yml
 copy 过去
 ## 6./usr/local/docker/rocketmq# docker-compose up -d
-
+## 7.docker -ps
+查看是否启动
